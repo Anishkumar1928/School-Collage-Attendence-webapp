@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/output.css">
+    <title>Document</title>
+</head>
+<body class="h-[100vh] bg-[#080710]">
+    <div class="flex h-[100%]  justify-around">
+        <div class="w-[503px] h-[503px] mt-8 rounded-full bg-gradient-to-r from-[#1845AD] to-[#23A2F600]"></div>
+        <div class="w-[503px] h-[503px] mt-48 rounded-full bg-gradient-to-r from-[#FF512F] to-[#F0981900]"></div>
+    </div>
+    <div class="h-[531px] overflow-scroll text-white   sm:w-[846px] rounded-md backdrop-blur-xl drop-shadow-sm fill-zinc-600 relative sm:ml-[350px] mt-[-700px] sm:mt-[-620px]">
+        <div class="overflow-x-auto">
+            <table class=" text-white table">
+              <!-- head -->
+              <thead>
+                <tr>
+                  <th class="text-white">
+                    <label>
+                        &nbsp;&nbsp; P &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A
+                    </label>
+                  </th>
+                  <th class="text-white">Roll no</th>
+                  <th class="text-white">Name</th>
+                </tr>
+              </thead>
+              <tbody>
+                <form action="/result" method="post">
+                {% for i in list[0]  %}
+                <!-- row 1 -->
+                    <tr>
+                    <th>
+                        <label>
+                        <input type="radio" id="vehicle1" name="{{i}}" value="P" class="bg-white checkbox " />
+                        <input type="radio" id="vehicle1" name="{{i}}" value="A" class="bg-white checkbox ml-3" />
+                        </label>
+                    </th>
+                    <td>
+                        <div class="flex items-center gap-3">
+                        <div>
+                            <div class="font-bold">{{loop.index}}</div>
+                        </div>
+                        </div>
+                    </td>
+                    <td>
+                        {{i}}
+                    </td>
+                    </tr>
+                <!-- row 1 -->
+                {% endfor %}
+                
+
+
+                    <tr>
+                        <td></td>
+                        <td class="btn btn-primary"><button>submit</button></td>
+                    </tr>
+                </form>           
+    </div>
+</body>
+</html>

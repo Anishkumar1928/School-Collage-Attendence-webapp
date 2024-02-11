@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Design by foolishdeveloper.com -->
+    <title>Select_subject</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/selectsub.css">
+</head>
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form method="POST" action="{{url}}">
+        <h3>Select Here</h3>
+
+        <label for="section">section</label>
+        <select name="section" class="input">
+            {% for i in section  %}
+            <option class="select" value="{{i}}">{{i}}</option>
+            {% endfor %}
+          </select>
+
+        <label for="Subject">Subject</label>
+        <select name="Subject" class="input">
+            {% for i in subject  %}
+            <option class="select" value="{{i}}">{{i}}</option>
+            {% endfor %}
+        </select>
+
+        <button>SELECT</button>
+    </form>
+</body>
+</html>

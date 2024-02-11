@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/edit.css">
+</head>
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form method="POST" action="/editattends">
+        <h3>Select Here</h3>
+
+        <label  for="Date">Date</label>
+        <input class="input" type="date" name="Date" id="">
+
+        <label for="roll">ROLL NUMBER</label>
+        <input class="input" type="number" name="roll" id="">
+
+        <label for="section">Section</label>
+        <select name="section" class="input">
+            {% for i in section  %}
+            <option class="select" value="{{i}}">{{i}}</option>
+            {% endfor %}
+        </select>
+        
+        <label for="Subject">Subject</label>
+        <select name="Subject" class="input">
+            {% for i in subject  %}
+            <option class="select" value="{{i}}">{{i}}</option>
+            {% endfor %}
+        </select>
+        <label for="att">PRESENT/ABSENT</label>
+        <select name="att" class="input">
+            <option style="background-color: #080710;" value="A">A</option>
+            <option style="background-color: #080710;" value="P">P</option>
+        <select name="section" class="input">
+
+        <button>EDIT</button>
+    </form>
+</body>
+</html>
