@@ -95,17 +95,6 @@ def select_sub():
     else:
         return  redirect(url_for('login'))
 
-
-# @app.route('/select_sub')
-# def select_sub():
-#     if 'username' in session:
-#         result=session['username']
-#         print(result)
-#         return render_template("selectsub.html",result=result)
-#     else:
-#         return redirect(url_for('login'))
-
-
 @app.route('/take_attendence',methods=['GET', 'POST'])
 def take_attendence():
     if 'username' in session:
@@ -124,31 +113,6 @@ def take_attendence():
             return redirect(url_for('select_sub'))
     else:
         return redirect(url_for('login'))
-
-
-# @app.route('/take_attendence',methods=['GET', 'POST'])
-# def take_attendence():
-#     if 'username' in session:
-#         if request.method == 'POST':
-#             section = request.form.get('section')
-#             subject= request.form.get('Subject')
-#             session['subject']=str(section+subject)
-#             if 'subject' in session: 
-#                 print(session['subject'])
-#                 student=extrat_stu(f"{session['subject']}")
-#                 length=len(student)
-#                 list=[student,length]
-#                 return render_template("take_att.html",list=list)
-#             else:
-#                 result=session['username']
-#                 return redirect(url_for('select_sub'))
-#         else:
-#             result=session['username']
-#             return redirect(url_for('select_sub'))
-#     else:
-#         return redirect(url_for('login'))
-    
-
 
 @app.route('/result',methods=['GET', 'POST'])
 def result():
