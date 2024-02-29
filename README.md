@@ -29,7 +29,6 @@ Make sure you have the following installed:
 
 1. Clone the repository: `git clone https://github.com/your-username/attendance-web-app.git`
 2. Navigate to the project directory: `cd attendance-web-app`
-3. Install dependencies: `pip install -r requirements.txt`
 
 ### Usage
 
